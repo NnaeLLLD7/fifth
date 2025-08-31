@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Love Letter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+    <style>
+      /* Reset some default styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Georgia', serif;
+        background: linear-gradient(135deg, rgba(208, 240, 192, 0.5), rgba(163, 195, 147, 0.8)), url('BBBG.jpg.png') no-repeat center center fixed;
+        background-size: cover;
+        color: #5a1a2d;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .container {
+  background-color: rgba(255, 240, 246, 0.5); /* Reduced opacity to 0.5 */
+  padding: 2rem 3rem;
+  max-width: 600px;
+  width: 90%;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(250, 105, 180, 0.3);
+  text-align: center;
+  position: relative;
+      }
+
+      h1 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 2.8rem;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+
+      p {
+        font-size: 1.25rem;
+        line-height: 1.6;
+        margin: 1.5rem 0 2rem;
+        font-style: italic;
+      }
+
+      .signature {
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-top: 2rem;
+        border-top: 1px solid #f9c6d3;
+        padding-top: 1rem;
+        color: #a01f40;
+      }
+
+      /* Heart icon styling */
+      .heart {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        font-size: 3rem;
+        color: #ff4d6d;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.2);
+          opacity: 0.7;
+        }
+      }
+
+      /* Falling hearts animation */
+      .falling-hearts {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .heart-fall {
+        position: absolute;
+        font-size: 2rem;
+        color: #ff4d6d;
+        animation: fall linear infinite;
+        opacity: 0.8;
+      }
+
+      @keyframes fall {
+        0% {
+          transform: translateY(-100vh) rotate(0deg);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(100vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
+
+      /* Different animation durations for variety */
+      .heart-fall:nth-child(1) { animation-duration: 5s; left: 10%; }
+      .heart-fall:nth-child(2) { animation-duration: 7s; left: 20%; animation-delay: 1s; }
+      .heart-fall:nth-child(3) { animation-duration: 6s; left: 30%; animation-delay: 2s; }
+      .heart-fall:nth-child(4) { animation-duration: 8s; left: 40%; animation-delay: 0.5s; }
+      .heart-fall:nth-child(5) { animation-duration: 9s; left: 50%; animation-delay: 1.5s; }
+      .heart-fall:nth-child(6) { animation-duration: 6.5s; left: 60%; animation-delay: 3s; }
+      .heart-fall:nth-child(7) { animation-duration: 7.5s; left: 70%; animation-delay: 0.8s; }
+      .heart-fall:nth-child(8) { animation-duration: 8.5s; left: 80%; animation-delay: 2.5s; }
+      .heart-fall:nth-child(9) { animation-duration: 5.5s; left: 90%; animation-delay: 1.2s; }
+      .heart-fall:nth-child(10) { animation-duration: 10s; left: 15%; animation-delay: 4s; }
+
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Responsive typography */
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+
+        .container {
+          padding: 1.5rem 1.8rem;
+        }
+
+        .heart-fall {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="falling-hearts">
+      <div class="heart-fall">❤️</div>
+      <div class="heart-fall">💖</div>
+      <div class="heart-fall">💕</div>
+      <div class="heart-fall">💗</div>
+      <div class="heart-fall">💓</div>
+      <div class="heart-fall">💘</div>
+      <div class="heart-fall">💝</div>
+      <div class="heart-fall">💞</div>
+      <div class="heart-fall">💟</div>
+      <div class="heart-fall">❣️</div>
+    </div>
+    <div class="container">
+      <div class="heart">❤️</div>
+      <h1>Happy 5th Month of Love My Babiii</h1>
+      <p><i>“It's been five months of being together
+My love for you is getting bigger
+That's for sure darling
+Because you showed love so tender 
+we maybe sometimes in chaos
+Yet, we prove that true love exists
+Though hard, you still hold on
+And would rather say 'mine, stay a li'l longer'”
+— Bojoy Barredo</i></p>
+      <p>
+        Five months. It still feels unreal sometimes, because even though we’re far apart, my heart feels so close to you every single day. LDR isn’t easy, we both know that. There are days when the distance feels heavier than usual, when the only thing I want is to hold your hand, hug you tight, and tell you face-to-face how much I love you. But even with all the miles between us, you’ve made me feel so loved, so cared for, and so important. And that’s something I’ll never take for granted.
+
+Of course, these five months haven’t been perfect. We’ve argued, we’ve misunderstood each other, and sometimes even just one wrong message or one wrong word has caused pain. There were moments it felt like everything could fall apart. But what makes me proud of us, Babiii, is that no matter how bad things got, we always found our way back. We fought, but we fixed it. We stumbled, but we stood up again. And every time we do, it makes me realize even more how strong our love really is.
+
+Because love isn’t about being perfect. Love is about choosing each other, over and over again, even when it’s hard. And that’s what we’ve done, distance, fights, tears, and all. That’s why I believe so much in us, Babiii. That’s why I know this love will last.
+
+Thank you for being so patient with me, even when I let my temper or my pride get in the way. Thank you for loving me through my mistakes, and for forgiving me when I slip. Thank you for choosing me, not just on the good days, but especially on the bad ones. You have no idea how much that means to me. You’re my safe place, my comfort, my happiness, even from miles away.
+
+Babiii, I know being apart isn’t easy. There will still be days when we’ll miss each other so much it hurts, days when we’ll argue, days when we’ll test each other’s patience. But no matter what, I promise this I’ll always fight for us. I’ll keep choosing you, through the distance, through the challenges, through everything. You are worth it all, and I’ll never stop reminding you of that.
+
+So today, on our 5th monthsary, I just want to say thank you. Thank you for staying, for believing in us, and for giving me a love so real that distance can’t destroy it. Here’s to five months of love that has survived distance and challenges, and here’s to all the months and years ahead, when one day, we won’t just be celebrating from afar, but side by side, in each other’s arms.
+
+<p>so hey babiii did you know that our day is so very special?
+
+guess why.....
+
+Every 1st day of the month will always be special for me, because it’s the reminder of when our story officially began. While others just see the start of a new month, for me it’s more than that it’s the day that reminds me of us. The first day of the month means a fresh start, a new chapter, and another chance to love you even better than yesterday.
+
+Isn’t it beautiful, Babiii, that we celebrate our love on the very first day? It’s like every month begins with you in my heart, reminding me that no matter what comes in the next days or weeks, I already have the greatest blessing  you. Our monthsary isn’t just about counting the days we’ve been together, it’s about cherishing every little victory, every moment we’ve fought for, and every time we chose each other even when things got tough.
+
+So as another month begins today, I want you to know this: just like how every 1st day gives us a new beginning, my heart will always start over for you. No matter how many months pass, no matter how many arguments or struggles we face, I will always choose to love you again and again.
+
+
+I love you endlessly, my Babiii. Five months down, forever to go</p>
+      </p>
+      <p class="signature">Yours forever,</p>
+      <p class="signature">NnaelL</p>
+    </div>
+  </body>
+  <!-- Background music -->
+  <div id="player"></div>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script>
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '1',
+        width: '1',
+        videoId: 'lnNkifOcJ1Q',
+        playerVars: {
+          'autoplay': 1,
+          'loop': 1,
+          'mute': 0,
+          'playlist': 'lnNkifOcJ1Q'
+        },
+        events: {
+          'onReady': onPlayerReady
+        }
+      });
+    }
+    function onPlayerReady(event) {
+      event.target.playVideo();
+    }
+  </script>
+</html>
