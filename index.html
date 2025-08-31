@@ -146,9 +146,64 @@
           font-size: 1.5rem;
         }
       }
+
+      /* Moving text */
+      .moving-text-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -2;
+        pointer-events: none;
+      }
+
+      .moving-text {
+        position: absolute;
+        font-size: 4rem;
+        font-family: 'milker';
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0.8);
+        background: linear-gradient(135deg, rgba(208, 240, 192, 0.5), rgba(163, 195, 147, 0.8));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        white-space: nowrap;
+        animation: moveSideBySide 10s linear infinite;
+      }
+
+      .moving-text:nth-child(1) {
+        top: 20%;
+        animation-delay: 0s;
+      }
+
+      .moving-text:nth-child(2) {
+        top: 80%;
+        animation-delay: 5s;
+      }
+
+      @keyframes moveSideBySide {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100vw);
+        }
+      }
     </style>
   </head>
   <body>
+    <div class="moving-text-container">
+      <div class="moving-text">I LOVE YOU ALWAYS MY BABIII</div>
+      <div class="moving-text">I LOVE YOU ALWAYS MY BABIII</div>
+       <div class="moving-text">I LOVE YOU ALWAYS MY BABIII</div>
+      <div class="moving-text">I LOVE YOU ALWAYS MY BABIII</div>
+       <div class="moving-text">I LOVE YOU ALWAYS MY BABIII</div>
+      <div class="moving-text">I LOVE YOU ALWAYS MY BABIII</div>
+       <div class="moving-text">I LOVE YOU ALWAYS MY BABIII</div>
+      <div class="moving-text">I LOVE YOU ALWAYS MY BABIII</div>
+    </div>
     <div class="falling-hearts">
       <div class="heart-fall">❤️</div>
       <div class="heart-fall">💖</div>
@@ -203,15 +258,6 @@ I love you endlessly, my Babiii. Five months down, forever to go</p>
       <p class="signature">NnaelL</p>
     </div>
   </body>
-  <!-- Background music -->
- <div id="player">
-  <audio id="audio-player" autoplay loop>
-    <source src="path/to/your/local/Pfm.mp3" type="audio/mpeg">
-  </audio>
-</div>
-<script>
-  var audioPlayer = document.getElementById('audio-player');
-  audioPlayer.play();
-</script>
+  
+  
 </html>
-
