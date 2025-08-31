@@ -204,28 +204,14 @@ I love you endlessly, my Babiii. Five months down, forever to go</p>
     </div>
   </body>
   <!-- Background music -->
-  <div id="player"></div>
-  <script src="https://www.youtube.com/iframe_api"></script>
-  <script>
-    var player;
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('player', {
-        height: '1',
-        width: '1',
-        videoId: 'lnNkifOcJ1Q',
-        playerVars: {
-          'autoplay': 1,
-          'loop': 1,
-          'mute': 0,
-          'playlist': 'lnNkifOcJ1Q'
-        },
-        events: {
-          'onReady': onPlayerReady
-        }
-      });
-    }
-    function onPlayerReady(event) {
-      event.target.playVideo();
-    }
-  </script>
+ <div id="player">
+  <audio id="audio-player" autoplay loop>
+    <source src="path/to/your/local/Pfm.mp3" type="audio/mpeg">
+  </audio>
+</div>
+<script>
+  var audioPlayer = document.getElementById('audio-player');
+  audioPlayer.play();
+</script>
 </html>
+
